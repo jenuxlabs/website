@@ -1,1 +1,23 @@
-export default function Privacy(){return <><section className="page-hero"><p className="eyebrow">PRIVACY</p><h1>Clear, product-specific privacy.</h1></section><article className="content"><p>Last updated: 27 August 2026</p><h2>Website</h2><p>This static website does not currently provide accounts, forms, advertising or product analytics. Normal hosting and network infrastructure may process technical request data needed to deliver and secure the site.</p><h2 id="phonenas">PhoneNAS development build</h2><p>The current PhoneNAS build operates an SMB server on your local network and accesses only the folder you select through Android’s system storage picker.</p><ul><li><strong>Files:</strong> file names, directory information and file contents are made available to authenticated SMB clients that you connect on your local network. Jenux Labs does not receive them.</li><li><strong>Credentials:</strong> the SMB username and password are stored locally in the app’s preferences on the Android device. They are used to authenticate local SMB connections and are not sent to Jenux Labs.</li><li><strong>Network:</strong> the app uses local-network connectivity and service discovery. Android declares this through internet, Wi‑Fi/network-state and multicast permissions.</li><li><strong>Storage:</strong> access is granted by your explicit folder selection and remains subject to the Android storage provider.</li><li><strong>Advertising, analytics, crash reporting and purchases:</strong> none of these SDKs are enabled in the current inspected build.</li></ul><p>Deleting the app normally removes its local preferences. Folder access can also be revoked in Android settings. Files created in the shared folder remain there unless you delete them.</p><h2>Contact</h2><p>Privacy questions: <a href="mailto:privacy@jenuxlabs.com">privacy@jenuxlabs.com</a>.</p><p className="note">This policy must be reviewed again before release if advertising, analytics, crash reporting, billing or other data-handling dependencies are added.</p></article></>}
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Privacy',
+  description: 'Privacy information for the Jenux Labs website and apps in development.',
+};
+
+export default function Privacy() {
+  return <>
+    <section className="page-hero"><p className="eyebrow">PRIVACY</p><h1>Clear privacy information.</h1></section>
+    <article className="content">
+      <p>Last updated: 28 August 2026</p>
+      <h2>Website</h2>
+      <p>This static website does not currently provide accounts, forms, advertising or product analytics. Normal hosting and network infrastructure may process technical request data needed to deliver and secure the site.</p>
+      <h2 id="phonenas">Apps in development</h2>
+      <p>PhoneNAS, PhoneDrop and PhoneDesk are in development and are not yet available to download publicly. This website notice is not an app-specific privacy policy.</p>
+      <p>Each app needs a privacy notice describing the data handled by its released version, including any advertising or payment services it uses. Development builds can differ; refer to the information supplied with the specific build you are testing.</p>
+      <h2>Contact</h2>
+      <p>Privacy questions: <a href="mailto:privacy@jenuxlabs.com">privacy@jenuxlabs.com</a>.</p>
+      <p>Please do not send passwords, pairing keys or private files by email.</p>
+    </article>
+  </>;
+}
