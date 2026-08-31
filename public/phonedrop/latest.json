@@ -1,0 +1,17 @@
+{
+  "product": "PhoneDrop",
+  "version": "1.0.3",
+  "released": "2026-08-31",
+  "windows": {
+    "url": "https://jenuxlabs.com/phonedrop/PhoneDrop-Setup-1.0.3.exe",
+    "sha256": "0bea56787be9a86f9b6898b920e292a69a53eee7d0b3eb66fc33761e0d4373fc"
+  },
+  "macos": {
+    "url": "https://jenuxlabs.com/downloads/PhoneDrop-1.0.3.dmg",
+    "sha256": "3748e28b18b0643e7483055057198775c466607cd4066ba612bf82cd3295a454"
+  },
+  "android": {
+    "url": "https://jenuxlabs.com/downloads/PhoneDrop-1.0.3-Android.apk",
+    "sha256": "9fe1560a05964342cfb3e0ba5d1d7cf2309921aa34d4308435bb361fe1bd6a92"
+  }
+}
