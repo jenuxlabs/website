@@ -10,6 +10,9 @@ export default function Products() {
       <h2>PhoneNAS</h2>
       <p>Turn an Android device into practical network storage.</p>
       <Link className="button" href="/products/phonenas/">Learn about PhoneNAS</Link>
+      <h2>PhoneDesk</h2>
+      <p>Use an Android device as a practical remote screen and control surface.</p>
+      <Link className="button" href="/products/phonedesk/">Learn about PhoneDesk</Link>
     </section>
   </>;
 }

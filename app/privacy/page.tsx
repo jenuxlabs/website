@@ -22,6 +22,8 @@ export default function Privacy() {
       <p>This website does not provide user accounts or upload forms and does not display advertising. Normal hosting and security infrastructure may process technical request data such as IP address, browser information, requested pages and timestamps to deliver and protect the site and its downloads.</p>
       <h2 id="phonenas">PhoneNAS development build</h2>
       <p>The current PhoneNAS build operates an SMB server on your local network and accesses only the folder you select through Android’s system storage picker. SMB credentials are stored locally and are not sent to Jenux Labs. PhoneNAS remains a development product and its policy will be reviewed before release.</p>
+      <h2 id="phonedesk">PhoneDesk development build</h2>
+      <p>PhoneDesk remains in development. Its current builds use local-network connectivity between devices for screen and control features. Its data handling and final permissions will be reviewed and documented before release.</p>
       <h2>Retention and your choices</h2>
       <p>PhoneDrop’s app-owned settings and records remain on your device until you remove pairings, reset the app, clear its storage or uninstall it. Received files remain in the PhoneDrop folder until you delete them. Third-party retention is governed by the applicable provider’s policies and your consent choices.</p>
       <h2>Contact</h2>
