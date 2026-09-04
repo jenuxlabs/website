@@ -13,8 +13,8 @@
     "sha256": "5263b00942ac17e7dcf7c80191ad364505e89a7ae894e21201e91f9780a27590"
   },
   "android": {
-    "version": "1.0.3",
-    "url": "https://jenuxlabs.com/downloads/PhoneDrop-1.0.3-Android.apk",
-    "sha256": "69cb837e1697792413e3c38d3f89967f6d3d7fb5e84af47dba69d009c2b8a5c0"
+    "version": "1.0.4",
+    "url": "https://jenuxlabs.com/downloads/PhoneDrop-1.0.4-Android.apk",
+    "sha256": "c935de403f1a9c36a142df7309f129146a81eedefef4f60c1d4dc132ca016b91"
   }
 }

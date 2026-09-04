@@ -17,7 +17,7 @@ const downloads = [
     os: 'Android',
     icon: '◆',
     detail: 'Signed APK · Android 8+ · 6.6 MB',
-    href: '/downloads/PhoneDrop-1.0.3-Android.apk',
+    href: '/downloads/PhoneDrop-1.0.4-Android.apk',
     label: 'Download Android APK',
   },
 ];
@@ -138,7 +138,7 @@ export default function Home() {
       </section>
 
       <section className="section" id="download">
-        <header><p className="eyebrow">DOWNLOAD</p><h2>Ready to drop?</h2><p className="section-intro">Windows 1.0.8, with Android and macOS 1.0.3. Use PhoneDrop only on networks and devices you trust.</p></header>
+        <header><p className="eyebrow">DOWNLOAD</p><h2>Ready to drop?</h2><p className="section-intro">Android 1.0.4, Windows 1.0.8 and macOS 1.0.3. Use PhoneDrop only on networks and devices you trust.</p></header>
         <div className="pd-download-grid">
           {downloads.map((download) => (
             <article key={download.os}>
@@ -148,7 +148,7 @@ export default function Home() {
             </article>
           ))}
         </div>
-        <p className="pd-download-note">Android’s Google Play release is being prepared. The APK above is the signed 1.0.3 release for manual installation.</p>
+        <p className="pd-download-note">Get updates through Google Play when available. The APK above is the signed Android 1.0.4 release for manual installation.</p>
       </section>
 
       <section className="pd-v2" id="v2">
