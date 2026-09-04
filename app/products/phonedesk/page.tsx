@@ -1,13 +1,3 @@
 import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'PhoneDesk',
-  description: 'An Android desktop experience for a larger screen. PhoneDesk is in development at Jenux Labs.',
-};
-
-export default function PhoneDesk() {
-  return <>
-    <section className="page-hero"><p className="eyebrow">PHONEDESK · IN DEVELOPMENT</p><h1>A bigger workspace for your phone.</h1><p className="lede">An Android desktop experience in development, designed for a larger screen, keyboard and mouse.</p></section>
-    <article className="content"><h2>Make more of the phone you have.</h2><p>PhoneDesk explores a familiar desktop layout for Android, bringing the phone into a workspace with more room to see and interact.</p><h2>Still taking shape.</h2><p>Desktop display, input and app launching are under active development. Device compatibility and connection options are still being tested.</p><p className="note">PhoneDesk is an experimental development project and is not yet available to download. Features and supported devices will be confirmed before release.</p><h2>Questions about PhoneDesk?</h2><p><a href="mailto:support@jenuxlabs.com">support@jenuxlabs.com</a></p></article>
-  </>;
-}
+export const metadata: Metadata = { title: 'PhoneDesk Beta', description: 'A bigger, desktop-shaped workspace for Android.' };
+export default function PhoneDesk() { return <><section className="product-hero beta-hero desk-hero"><div><span className="status beta">Beta</span><p className="eyebrow">PHONEDESK</p><h1>Give your phone room to think.</h1><p className="lede">PhoneDesk explores a clean Android workspace made for a larger screen, keyboard and mouse.</p><a className="button" href="mailto:beta@jenuxlabs.com?subject=PhoneDesk%20beta">Join the beta</a></div><div className="desk-display"><span>PhoneDesk</span><i /></div></section><section className="beta-points"><article><b>01</b><h3>A larger canvas</h3><p>Use more screen space than the phone display allows.</p></article><article><b>02</b><h3>Keyboard + mouse</h3><p>A familiar way to work when touch is not enough.</p></article><article><b>03</b><h3>Your Android apps</h3><p>Explore a desktop-shaped way into the phone you own.</p></article></section><section className="beta-note"><span>EARLY SOFTWARE</span><h2>The desk is still taking shape.</h2><p>Display, input and device compatibility are under active testing. Beta behavior and supported hardware may change.</p></section></>; }

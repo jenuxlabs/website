@@ -5,21 +5,21 @@ import './globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL('https://jenuxlabs.com'),
   title: {
-    default: 'PhoneDrop — Fast, private local file transfer',
+    default: 'Jenux Labs — Useful software for your devices',
     template: '%s — Jenux Labs',
   },
-  description: 'Send files directly between Android, macOS and Windows devices on your local network with PhoneDrop.',
+  description: 'PhoneDrop, PhoneNAS and PhoneDesk: practical tools that make more of the devices you already own.',
   openGraph: {
-    title: 'PhoneDrop — Drop files. Not your privacy.',
-    description: 'Fast, direct device-to-device transfers for Android, macOS and Windows.',
+    title: 'Jenux Labs — Useful software for your devices',
+    description: 'PhoneDrop, PhoneNAS and PhoneDesk: practical tools for phones and computers.',
     url: 'https://jenuxlabs.com',
     siteName: 'Jenux Labs',
     type: 'website',
   },
   twitter: {
     card: 'summary',
-    title: 'PhoneDrop — Drop files. Not your privacy.',
-    description: 'Fast, direct device-to-device transfers for Android, macOS and Windows.',
+    title: 'Jenux Labs — Useful software for your devices',
+    description: 'PhoneDrop, PhoneNAS and PhoneDesk: practical tools for phones and computers.',
   },
 };
 
@@ -33,9 +33,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <span>JENUX LABS</span>
           </Link>
           <nav aria-label="Main navigation">
-            <Link href="/#features">Features</Link>
-            <Link href="/#download">Download</Link>
-            <Link href="/#v2">2.0 preview</Link>
+            <Link href="/#products">Products</Link>
+            <Link href="/products/phonedrop/">PhoneDrop</Link>
             <Link href="/support/">Support</Link>
           </nav>
         </header>
@@ -52,7 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Link href="/terms/">Terms</Link>
             <a href="mailto:hello@jenuxlabs.com">Contact</a>
           </div>
-          <p className="copyright">© 2026 Jenux Labs · PhoneDrop 1.0.3</p>
+          <p className="copyright">© 2026 Jenux Labs · PhoneDrop 1.0.4</p>
         </footer>
       </body>
     </html>
