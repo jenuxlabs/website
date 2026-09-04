@@ -1,1 +1,1 @@
-1.0.3|https://jenuxlabs.com/phonedrop/PhoneDrop-Setup-1.0.3.exe
+1.0.8|https://jenuxlabs.com/phonedrop/PhoneDrop-Setup-1.0.8.exe

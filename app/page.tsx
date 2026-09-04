@@ -3,7 +3,7 @@ const downloads = [
     os: 'Windows',
     icon: '⊞',
     detail: 'Windows installer · 6.8 MB',
-    href: '/phonedrop/PhoneDrop-Setup-1.0.3.exe',
+    href: '/phonedrop/PhoneDrop-Setup-1.0.8.exe',
     label: 'Download for Windows',
   },
   {
@@ -34,7 +34,7 @@ export default function Home() {
     <>
       <section className="pd-hero">
         <div className="pd-hero-copy">
-          <p className="eyebrow">PHONEDROP 1.0.3 · ANDROID · MACOS · WINDOWS</p>
+          <p className="eyebrow">PHONEDROP · ANDROID · MACOS · WINDOWS</p>
           <div className="pd-title-row">
             <img src="/phonedrop/logo.png" alt="PhoneDrop logo" />
             <span>PhoneDrop</span>
@@ -138,7 +138,7 @@ export default function Home() {
       </section>
 
       <section className="section" id="download">
-        <header><p className="eyebrow">DOWNLOAD</p><h2>Ready to drop?</h2><p className="section-intro">Version 1.0.3 for Android, macOS and Windows. Use PhoneDrop only on networks and devices you trust.</p></header>
+        <header><p className="eyebrow">DOWNLOAD</p><h2>Ready to drop?</h2><p className="section-intro">Windows 1.0.8, with Android and macOS 1.0.3. Use PhoneDrop only on networks and devices you trust.</p></header>
         <div className="pd-download-grid">
           {downloads.map((download) => (
             <article key={download.os}>
