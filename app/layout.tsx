@@ -33,8 +33,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <span>JENUX LABS</span>
           </Link>
           <nav aria-label="Main navigation">
-            <Link href="/#products">Products</Link>
-            <Link href="/products/phonedrop/">PhoneDrop</Link>
+            <details className="products-menu">
+              <summary>Products <span aria-hidden="true">⌄</span></summary>
+              <div className="products-menu-panel">
+                <Link href="/products/phonedrop/"><strong>PhoneDrop</strong><small>Stable · available now</small></Link>
+                <Link href="/products/phonenas/"><strong>PhoneNAS</strong><small>Coming soon to the App Store</small></Link>
+                <Link href="/products/phonedesk/"><strong>PhoneDesk</strong><small>Coming soon to the App Store</small></Link>
+                <Link className="products-menu-all" href="/products/">View all products →</Link>
+              </div>
+            </details>
+            <Link href="/about/">About</Link>
             <Link href="/support/">Support</Link>
           </nav>
         </header>
@@ -46,6 +54,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
           <div className="footer-links">
             <Link href="/products/">Products</Link>
+            <Link href="/about/">Lab notes</Link>
             <Link href="/about/">About</Link>
             <Link href="/privacy/">Privacy</Link>
             <Link href="/terms/">Terms</Link>

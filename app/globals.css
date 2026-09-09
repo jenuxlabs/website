@@ -37,6 +37,15 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--cyan); outline-
 .brand-logo { width: 38px; height: 38px; border-radius: 11px; box-shadow: 0 10px 25px #0b55bd24; }
 .mark { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, var(--blue), #2448d8); color: white; font-size: .7rem; box-shadow: 0 12px 30px #1268f32b; }
 nav, .footer-links { display: flex; gap: 28px; color: var(--muted); }
+.products-menu { position: relative; }
+.products-menu summary { cursor: pointer; list-style: none; }
+.products-menu summary::-webkit-details-marker { display: none; }
+.products-menu summary span { margin-left: 4px; color: var(--blue); }
+.products-menu-panel { position: absolute; z-index: 10; top: 32px; right: -18px; width: 245px; padding: 9px; border: 1px solid var(--line); border-radius: 16px; background: white; box-shadow: 0 20px 45px #0b315b18; }
+.products-menu-panel a { display: flex; flex-direction: column; gap: 1px; padding: 12px; border-radius: 10px; }
+.products-menu-panel a:hover { background: #edf4ff; }
+.products-menu-panel small { color: var(--muted); font-size: .76rem; }
+.products-menu-panel .products-menu-all { margin-top: 5px; border-top: 1px solid var(--line); border-radius: 0 0 10px 10px; color: var(--blue); font-weight: 750; }
 a:hover { color: var(--blue); }
 .eyebrow { margin: 0 0 18px; color: var(--blue); font-size: .74rem; font-weight: 850; letter-spacing: .18em; }
 h1 { max-width: 920px; margin: 0; font-size: clamp(4rem, 10vw, 8.4rem); line-height: .92; letter-spacing: -.065em; }
@@ -256,7 +265,7 @@ footer { padding: 52px 0 28px; display: grid; grid-template-columns: 1fr 1fr; }
 .status { display: inline-flex; align-items: center; gap: 7px; width: fit-content; padding: 7px 11px; border-radius: 999px; font: 850 .68rem ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; }
 .status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; box-shadow: 0 0 14px currentColor; }
 .status.stable { color: #087b40; background: #dcf9e9; }
-.status.beta { color: #7450d7; background: #eee8ff; }
+.status.beta, .status.coming-soon { color: #7450d7; background: #eee8ff; }
 .labs-hero { min-height: 650px; display: grid; grid-template-columns: 1.25fr .75fr; gap: 60px; align-items: center; padding: 85px 0; border-bottom: 1px solid var(--line); }
 .labs-hero h1 { max-width: 850px; font-size: clamp(3.8rem, 7.5vw, 7.2rem); }
 .hero-product { position: relative; min-height: 440px; display: flex; flex-direction: column; justify-content: flex-end; padding: 34px; overflow: hidden; border-radius: 30px; color: white; background: radial-gradient(circle at 80% 5%, #52ddff55, transparent 35%), linear-gradient(145deg, #071329, #0a2b63 65%, #1268f3); box-shadow: 0 30px 75px #071d4530; }
@@ -283,6 +292,11 @@ footer { padding: 52px 0 28px; display: grid; grid-template-columns: 1fr 1fr; }
 .labs-principles b { margin-bottom: 30px; color: var(--blue); font: 800 .7rem ui-monospace, monospace; }
 .labs-principles strong { font-size: 1.2rem; }
 .labs-principles p { margin-bottom: 0; }
+.lab-notes { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; padding: 75px 0 90px; border-top: 1px solid var(--line); }
+.lab-notes h2 { max-width: 470px; }
+.lab-notes > div:last-child { max-width: 520px; padding-top: 10px; }
+.lab-notes > div:last-child p { font-size: 1.16rem; }
+.lab-notes a { color: var(--blue); font-weight: 800; }
 
 .product-hero { min-height: 660px; display: grid; grid-template-columns: 1.15fr .85fr; gap: 70px; align-items: center; margin-top: 22px; padding: 65px; overflow: hidden; border-radius: 32px; }
 .product-hero h1 { font-size: clamp(3.7rem, 7vw, 6.8rem); }
@@ -346,7 +360,7 @@ footer { padding: 52px 0 28px; display: grid; grid-template-columns: 1fr 1fr; }
 @media (max-width: 620px) {
   .labs-hero h1, .product-hero h1 { font-size: clamp(3rem, 15vw, 4.6rem); }
   .product-hero { min-height: auto; padding: 44px 22px; border-radius: 23px; }
-  .quick-flow, .labs-principles, .short-dark { grid-template-columns: 1fr; }
+  .quick-flow, .labs-principles, .short-dark, .lab-notes { grid-template-columns: 1fr; }
   .quick-flow div, .labs-principles div { padding: 22px 0; border-right: 0; border-bottom: 1px solid var(--line); }
   .short-dark { gap: 18px; padding: 42px 24px; }
   .phone-shot figcaption { right: -8px; }
