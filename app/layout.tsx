@@ -51,7 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Link href="/terms/">Terms</Link>
             <a href="mailto:hello@jenuxlabs.com">Contact</a>
           </div>
-          <p className="copyright">© 2026 Jenux Labs · PhoneDrop 1.0.4</p>
+          <p className="copyright">© 2026 Jenux Labs · PhoneDrop 1.0.5</p>
         </footer>
       </body>
     </html>

@@ -1,6 +1,6 @@
 {
   "product": "PhoneDrop",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "released": "2026-09-04",
   "windows": {
     "version": "1.0.8",
@@ -13,8 +13,8 @@
     "sha256": "5263b00942ac17e7dcf7c80191ad364505e89a7ae894e21201e91f9780a27590"
   },
   "android": {
-    "version": "1.0.4",
-    "url": "https://jenuxlabs.com/downloads/PhoneDrop-1.0.4-Android.apk",
+    "version": "1.0.5",
+    "url": "https://play.google.com/apps/testing/labs.jenux.phonedrop",
     "sha256": "c935de403f1a9c36a142df7309f129146a81eedefef4f60c1d4dc132ca016b91"
   }
 }
