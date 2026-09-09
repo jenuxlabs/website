@@ -1,3 +1,18 @@
 import Link from 'next/link';
-const products=[['PhoneDrop','MAIN · ANDROID','Direct peer-to-peer file delivery over your local network. No cloud upload required.','/products/phonedrop/'],['PhoneNAS','BETA','Turn an Android phone into practical network storage.','/products/phonenas/'],['PhoneDesk','BETA','The desktop control deck for building, installing and checking Jenux Labs apps.','/products/phonedesk/']];
-export default function Products(){return <><section className="page-hero"><p className="eyebrow">PRODUCTS</p><h1>Practical tools.</h1><p className="lede">Focused software for direct device-to-device work and local networks.</p></section><section className="content product-list">{products.map(([name,status,text,href])=><article key={name}><small>{status}</small><h2>{name}</h2><p>{text}</p><Link className="button" href={href}>Explore {name}</Link></article>)}</section></>}
+
+export default function Products() {
+  return <>
+    <section className="page-hero"><p className="eyebrow">PRODUCTS</p><h1>Practical tools.</h1><p className="lede">Focused technology built to solve real problems.</p></section>
+    <section className="content">
+      <h2>PhoneDrop</h2>
+      <p>Fast, direct local file transfer across Android, macOS and Windows.</p>
+      <Link className="button" href="/#download">Explore PhoneDrop</Link>
+      <h2>PhoneNAS</h2>
+      <p>Turn an Android device into practical network storage.</p>
+      <Link className="button" href="/products/phonenas/">Learn about PhoneNAS</Link>
+      <h2>PhoneDesk</h2>
+      <p>Use an Android device as a practical remote screen and control surface.</p>
+      <Link className="button" href="/products/phonedesk/">Learn about PhoneDesk</Link>
+    </section>
+  </>;
+}

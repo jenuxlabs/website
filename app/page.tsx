@@ -1,11 +1,18 @@
 import Link from 'next/link';
-const products=[
-  {n:'01',name:'PhoneDrop',status:'MAIN · ANDROID',text:'Direct, peer-to-peer file delivery between Android, macOS and Windows. Your files stay between your devices—no cloud upload required.',href:'/products/phonedrop/'},
-  {n:'02',name:'PhoneNAS',status:'BETA',text:'Turn an Android phone into practical network storage for the devices already on your local network.',href:'/products/phonenas/'},
-  {n:'03',name:'PhoneDesk',status:'BETA',text:'A desktop control deck for building, installing and checking Jenux Labs apps and devices.',href:'/products/phonedesk/'},
+
+const products = [
+  { name: 'PhoneDrop', status: 'Stable', tone: 'blue', line: 'Move files directly between Android, macOS and Windows.', detail: 'Fast local transfers. No account. No cloud detour.', href: '/products/phonedrop/', action: 'Get PhoneDrop' },
+  { name: 'PhoneNAS', status: 'Beta', tone: 'violet', line: 'Turn spare Android storage into useful network storage.', detail: 'Share selected folders with devices on your local network.', href: '/products/phonenas/', action: 'See the beta' },
+  { name: 'PhoneDesk', status: 'Beta', tone: 'cyan', line: 'Give your Android phone a bigger, desktop-shaped workspace.', detail: 'Built around larger screens, keyboard and mouse.', href: '/products/phonedesk/', action: 'See the beta' },
 ];
-export default function Home(){return <>
-<section className="hero"><p className="eyebrow">JENUX LABS</p><h1>Technology that stays close.</h1><p className="lede">Useful software built for direct device-to-device work, local networks and the hardware in front of you.</p><div className="actions"><Link className="button" href="/products/phonedrop/">Explore PhoneDrop</Link><Link href="/products/">View all products →</Link></div></section>
-<section className="section"><header><p className="eyebrow">THE CURRENT LINEUP</p><h2>Three focused tools.</h2><p>PhoneDrop is the main product. PhoneNAS and PhoneDesk are active betas.</p></header><div className="product-grid">{products.map(p=><article className="product-card" key={p.name}><b>{p.n}</b><small>{p.status}</small><h3>{p.name}</h3><p>{p.text}</p><Link href={p.href}>Explore {p.name} →</Link></article>)}</div></section>
-<section className="section split"><header><p className="eyebrow">OUR PRINCIPLE</p><h2>Keep the path direct.</h2></header><p className="large">PhoneDrop sends files directly between paired devices on the same local network. There is no required cloud relay or upload step. That local-first approach guides the rest of Jenux Labs: clear tools, controlled data paths and software that solves the problem in front of you.</p></section>
-</>}
+
+export default function Home() {
+  return <>
+    <section className="labs-hero">
+      <div><p className="eyebrow">JENUX LABS · INDEPENDENT SOFTWARE</p><h1>Make more of the devices you already own.</h1><p className="lede">Small, practical tools that connect your phone and computer—without turning a simple job into a service.</p><div className="actions"><Link className="button" href="/products/phonedrop/">Get PhoneDrop</Link><Link href="#products">Explore all three ↓</Link></div></div>
+      <Link className="hero-product" href="/products/phonedrop/" aria-label="Explore PhoneDrop"><span className="status stable">Stable · 1.0.4</span><img src="/phonedrop/logo.png" alt="" /><strong>PhoneDrop</strong><p>Drop files.<br />Not your privacy.</p><span className="hero-arrow">↗</span></Link>
+    </section>
+    <section className="product-section" id="products"><header><p className="eyebrow">THREE USEFUL IDEAS</p><h2>One stable. Two taking shape.</h2></header><div className="product-cards">{products.map((product) => <Link className={`product-card ${product.tone}`} href={product.href} key={product.name}><span className={`status ${product.status.toLowerCase()}`}>{product.status}</span><h3>{product.name}</h3><p className="product-line">{product.line}</p><p>{product.detail}</p><strong>{product.action} →</strong></Link>)}</div></section>
+    <section className="labs-principles"><div><b>01</b><strong>Useful first</strong><p>Focused tools for real jobs.</p></div><div><b>02</b><strong>Local by instinct</strong><p>Your hardware should work together.</p></div><div><b>03</b><strong>Built independently</strong><p>Small team, direct decisions.</p></div></section>
+  </>;
+}
