@@ -65,6 +65,9 @@ p { color: var(--muted); }
 .flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
 .flow span { padding: 20px 10px; background: white; border: 1px solid var(--line); text-align: center; font-weight: 700; }
 .note { padding: 20px; background: #eaf2ff; border-left: 3px solid var(--blue); }
+.nas-helper-note { max-width: 680px; margin-top: 24px; font-size: .9rem; }
+.nas-helper-note strong { color: var(--ink); }
+.nas-helper-note code, .beta-note code { padding: 2px 6px; border-radius: 6px; background: #e7eef9; color: var(--ink); font: 700 .86em ui-monospace, SFMono-Regular, Menlo, monospace; }
 
 .pd-hero {
   position: relative;
