@@ -8,10 +8,10 @@ export const metadata: Metadata = {
     default: 'Jenux Labs — Useful software for your devices',
     template: '%s — Jenux Labs',
   },
-  description: 'PhoneDrop, PhoneNAS and PhoneDesk: practical tools that make more of the devices you already own.',
+  description: 'Jenux Labs develops practical software, embedded systems and electronics.',
   openGraph: {
     title: 'Jenux Labs — Useful software for your devices',
-    description: 'PhoneDrop, PhoneNAS and PhoneDesk: practical tools for phones and computers.',
+    description: 'Useful technology: practical software, embedded systems and electronics.',
     url: 'https://jenuxlabs.com',
     siteName: 'Jenux Labs',
     type: 'website',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary',
     title: 'Jenux Labs — Useful software for your devices',
-    description: 'PhoneDrop, PhoneNAS and PhoneDesk: practical tools for phones and computers.',
+    description: 'Useful technology: practical software, embedded systems and electronics.',
   },
 };
 
@@ -29,17 +29,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <header className="site-header">
           <Link className="brand" href="/" aria-label="Jenux Labs home">
-            <img className="brand-logo" src="/phonedrop/logo.png" alt="" />
-            <span>JENUX LABS</span>
+            <img className="brand-logo" src="/jenux-mark.png" alt="" />
+            <span><b>JENUX</b><small>LABS</small></span>
           </Link>
           <nav aria-label="Main navigation">
             <details className="products-menu">
-              <summary>Products <span aria-hidden="true">⌄</span></summary>
+              <summary>Apps <span aria-hidden="true">⌄</span></summary>
               <div className="products-menu-panel">
-                <Link href="/products/phonedrop/"><strong>PhoneDrop</strong><small>Stable · available now</small></Link>
-                <Link href="/products/phonenas/"><strong>PhoneNAS</strong><small>Coming soon to the App Store</small></Link>
-                <Link href="/products/phonedesk/"><strong>PhoneDesk</strong><small>Coming soon to the App Store</small></Link>
-                <Link className="products-menu-all" href="/products/">View all products →</Link>
+                <Link href="/products/phonedrop/"><strong><img src="/phonedrop/logo.png" alt="" />PhoneDrop</strong><small>Local file transfer · available</small></Link>
+                <Link href="/products/phonenas/"><strong><img src="/phonenas/icon.png" alt="" />PhoneNAS</strong><small>Android NAS · closed testing</small></Link>
+                <Link href="/products/phonedesk/"><strong><span className="menu-monogram">PD</span>PhoneDesk</strong><small>Android desktop workspace · in development</small></Link>
+                <Link className="products-menu-all" href="/products/">See all apps →</Link>
               </div>
             </details>
             <Link href="/about/">About</Link>
@@ -50,17 +50,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <footer>
           <div>
             <strong>JENUX LABS</strong>
-            <p>Useful technology. Built independently.</p>
+            <p>Useful technology.</p>
           </div>
           <div className="footer-links">
             <Link href="/products/">Products</Link>
-            <Link href="/about/">Lab notes</Link>
             <Link href="/about/">About</Link>
             <Link href="/privacy/">Privacy</Link>
             <Link href="/terms/">Terms</Link>
             <a href="mailto:hello@jenuxlabs.com">Contact</a>
           </div>
-          <p className="copyright">© 2026 Jenux Labs · PhoneDrop 1.0.5</p>
+          <p className="copyright">© 2026 Jenux Labs · Independent software and technology lab</p>
         </footer>
       </body>
     </html>
