@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <a href="/products/phonedesk/"><strong><span className="menu-monogram">PD</span>PhoneDesk</strong><small>Android desktop workspace · in development</small></a>
           <a className="products-menu-all" href="/products/">See all apps →</a>
         </div></details>
-        <a href="/downloads/">Downloads</a><a href="/about/">About</a><a href="/support/">Support</a>
+        <a href="/downloads/">Downloads</a><a href="/support/">Support</a><a href="/privacy/">Privacy</a>
       </nav>
     </header>
     <main>{children}</main>
