@@ -13,7 +13,7 @@ const phoneDrop = [
 
 export default function Downloads() {
   return <>
-    <section className="page-hero"><p className="eyebrow">DOWNLOADS</p><h1>Get the right tool.</h1><p className="lede">Official Jenux Labs downloads, all in one place.</p><p className="quiet">Before downloading, read <a href="/privacy/">how Jenux Labs apps handle data and privacy</a>.</p></section>
+    <section className="page-hero"><p className="eyebrow">DOWNLOADS</p><h1>Get the right tool.</h1><p className="lede">Official Jenux Labs downloads, all in one place.</p><p className="download-safety-link">Want to know how the apps handle your data before downloading? <a href="/privacy/">Read privacy &amp; safety →</a></p></section>
     <section className="section download-section">
       <header><p className="eyebrow">PHONEDROP</p><h2>Direct local file transfer.</h2><p>Choose the version for the device you use.</p></header>
       <div className="download-grid">{phoneDrop.map(([icon, name, detail, href, label]) => <article key={name}><span className="os-icon">{icon}</span><div><h3>{name}</h3><p>{detail}</p></div><a className="button" href={href}>{label} <span>↓</span></a></article>)}</div>
