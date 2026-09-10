@@ -38,6 +38,14 @@ nav, .footer-links { display: flex; align-items: center; gap: 30px; color: var(-
 .products-menu-panel > a:hover { color: var(--ink); background: #edf4ff; }
 .products-menu-panel strong { display: flex; align-items: center; gap: 10px; }
 .products-menu-panel strong img, .menu-monogram { width: 28px; height: 28px; border-radius: 8px; }
+.products-menu-panel a[href="/products/phonenas/"] img,
+.app-card.nas .app-card-top img,
+.product-index-card.nas > img,
+.nas-spotlight .product-lockup img {
+  object-fit: cover;
+  clip-path: inset(6% round 20%);
+  transform: scale(1.14);
+}
 .menu-monogram { display: inline-grid; place-items: center; color: white; background: linear-gradient(135deg, #0b5369, #10a5bf); font-size: .6rem; }
 .products-menu-panel small { margin-left: 38px; color: var(--muted); font-size: .76rem; }
 .products-menu-panel .products-menu-all { margin-top: 5px; border-top: 1px solid var(--line); border-radius: 0 0 12px 12px; color: var(--blue); font-weight: 800; }
@@ -254,4 +262,3 @@ footer p { margin-bottom: 0; }
   .feature-screen-row { min-height: 430px; }
   .feature-screen-row figure { width: 180px; }
 }
-
