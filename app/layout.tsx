@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return <html lang="en"><head><link rel="stylesheet" href="/site.css" /></head><body>
+  return <html lang="en"><head><link rel="stylesheet" href="/site.css?v=20260910b" /></head><body>
     <header className="site-header">
       <a className="brand" href="/" aria-label="Jenux Labs home"><img className="brand-logo" src="/jenux-mark.png" alt="" /><span><b>JENUX</b><small>LABS</small></span></a>
       <nav aria-label="Main navigation">
