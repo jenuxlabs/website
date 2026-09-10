@@ -20,11 +20,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <a href="/products/phonedesk/"><strong><span className="menu-monogram">PD</span>PhoneDesk</strong><small>Android desktop workspace · in development</small></a>
           <a className="products-menu-all" href="/products/">See all apps →</a>
         </div></details>
-        <a href="/about/">About</a><a href="/support/">Support</a>
+        <a href="/downloads/">Downloads</a><a href="/about/">About</a><a href="/support/">Support</a>
       </nav>
     </header>
     <main>{children}</main>
     <footer><div><strong>JENUX LABS</strong><p>Useful technology.</p></div><div className="footer-links"><a href="/products/">Products</a><a href="/about/">About</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="mailto:hello@jenuxlabs.com">Contact</a></div><p className="copyright">© 2026 Jenux Labs · Independent software and technology lab</p></footer>
   </body></html>;
 }
-
