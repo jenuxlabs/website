@@ -224,7 +224,7 @@ footer p { margin-bottom: 0; }
   .site-header { min-height: 76px; align-items: center; }
   .brand b { font-size: .82rem; }
   .site-header nav { gap: 14px; font-size: .85rem; }
-  .site-header nav > a:first-of-type { display: none; }
+  .site-header nav > a:nth-of-type(2) { display: none; }
   .products-menu-panel { position: fixed; top: 76px; left: 20px; right: 20px; width: auto; }
   h1 { font-size: clamp(3.2rem, 16vw, 5rem); }
   .actions { align-items: flex-start; flex-direction: column; gap: 17px; }
