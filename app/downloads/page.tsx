@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 const phoneDrop = [
   ['⊞', 'Windows', 'PhoneDrop 1.0.8 installer', '/phonedrop/PhoneDrop-Setup-1.0.8.exe', 'Download for Windows'],
-  ['⌘', 'macOS', 'PhoneDrop 1.0.3 disk image', '/downloads/PhoneDrop-1.0.3.dmg', 'Download for macOS'],
+  ['⌘', 'macOS', 'PhoneDrop 1.0.3 disk image', '/files/PhoneDrop-1.0.3.dmg', 'Download for macOS'],
   ['◆', 'Android', 'PhoneDrop 1.0.5 closed test on Google Play', 'https://play.google.com/apps/testing/labs.jenux.phonedrop', 'Open Google Play'],
 ];
 
@@ -20,7 +20,7 @@ export default function Downloads() {
     </section>
     <section className="section download-section">
       <header><p className="eyebrow">PHONENAS</p><h2>Optional Mac helper.</h2><p>PhoneNAS works through normal SMB directly. The helper simply prepares and opens the local SMB address in Finder.</p></header>
-      <div className="download-grid"><article><span className="os-icon">⌘</span><div><h3>macOS helper</h3><p>PhoneNAS Helper 1.0 disk image</p></div><a className="button" href="/downloads/PhoneNAS-Helper-1.0-macOS.dmg" download>Download Mac helper <span>↓</span></a></article></div>
+      <div className="download-grid"><article><span className="os-icon">⌘</span><div><h3>macOS helper</h3><p>PhoneNAS Helper 1.0 disk image</p></div><a className="button" href="/files/PhoneNAS-Helper-1.0-macOS.dmg" download>Download Mac helper <span>↓</span></a></article></div>
       <p className="quiet">PhoneNAS is currently in closed testing. The helper is optional, has no telemetry or cloud connection, and is ad-hoc signed rather than notarized.</p>
     </section>
   </>;
