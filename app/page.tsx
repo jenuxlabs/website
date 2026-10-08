@@ -1,6 +1,6 @@
 const apps = [
   { name: 'PhoneDrop', status: 'Available', tone: 'drop', line: 'Move files directly between Android, macOS and Windows.', detail: 'Fast local transfers with no account and no cloud relay.', href: '/products/phonedrop/', icon: '/phonedrop/logo.png' },
-  { name: 'PhoneNAS', status: 'Closed testing', tone: 'nas', line: 'Turn an Android phone into practical network storage.', detail: 'Share chosen folders over familiar SMB, with users and permissions.', href: '/products/phonenas/', icon: '/phonenas/icon.png' },
+  { name: 'PhoneNAS', status: '1.0.2', tone: 'nas', line: 'Turn an Android phone into practical network storage.', detail: 'Share chosen folders and attached storage over SMB, with users, home folders and permissions.', href: '/products/phonenas/', icon: '/phonenas/icon.png' },
   { name: 'PhoneDesk', status: 'In development', tone: 'desk', line: 'Give Android a bigger, desktop-shaped workspace.', detail: 'Designed around a larger display, keyboard and mouse.', href: '/products/phonedesk/', icon: '' },
 ];
 
@@ -14,4 +14,3 @@ export default function Home() {
     <section className="principles"><div><b>01</b><strong>Useful first</strong><p>Focused tools for real jobs.</p></div><div><b>02</b><strong>Local by design</strong><p>Direct routes where they make sense.</p></div><div><b>03</b><strong>Independent</strong><p>Practical engineering without invented hype.</p></div></section>
   </>;
 }
-

@@ -11,6 +11,11 @@ const phoneDrop = [
   ['◆', 'Android', 'PhoneDrop 1.0.5 closed test on Google Play', 'https://play.google.com/apps/testing/labs.jenux.phonedrop', 'Open Google Play'],
 ];
 
+const phoneNAS = [
+  ['◆', 'Android', 'PhoneNAS 1.0.2 signed APK', '/files/PhoneNAS-1.0.2-Android.apk', 'Download Android APK'],
+  ['⌘', 'macOS', 'PhoneNAS Helper 1.3 notarized disk image', '/files/PhoneNAS-Helper-1.3-macOS.dmg', 'Download Mac helper'],
+];
+
 export default function Downloads() {
   return <>
     <section className="page-hero"><p className="eyebrow">DOWNLOADS</p><h1>Get the right tool.</h1><p className="lede">Official Jenux Labs downloads, all in one place.</p><p className="download-safety-link">Want to know how the apps handle your data before downloading? <a href="/privacy/">Read privacy &amp; safety →</a></p></section>
@@ -19,9 +24,9 @@ export default function Downloads() {
       <div className="download-grid">{phoneDrop.map(([icon, name, detail, href, label]) => <article key={name}><span className="os-icon">{icon}</span><div><h3>{name}</h3><p>{detail}</p></div><a className="button" href={href}>{label} <span>↓</span></a></article>)}</div>
     </section>
     <section className="section download-section">
-      <header><p className="eyebrow">PHONENAS</p><h2>Optional Mac helper.</h2><p>PhoneNAS works through normal SMB directly. The helper simply prepares and opens the local SMB address in Finder.</p></header>
-      <div className="download-grid"><article><span className="os-icon">⌘</span><div><h3>macOS helper</h3><p>PhoneNAS Helper 1.0 disk image</p></div><a className="button" href="/files/PhoneNAS-Helper-1.0-macOS.dmg" download>Download Mac helper <span>↓</span></a></article></div>
-      <p className="quiet">PhoneNAS is currently in closed testing. The helper is optional, has no telemetry or cloud connection, and is ad-hoc signed rather than notarized.</p>
+      <header><p className="eyebrow">PHONENAS</p><h2>Android server and optional Mac helper.</h2><p>Install PhoneNAS on Android. The helper discovers available servers, makes them visible in Finder and relays SMB locally; direct SMB remains available without it.</p></header>
+      <div className="download-grid">{phoneNAS.map(([icon, name, detail, href, label]) => <article key={name}><span className="os-icon">{icon}</span><div><h3>{name}</h3><p>{detail}</p></div><a className="button" href={href} download>{label} <span>↓</span></a></article>)}</div>
+      <p className="quiet">The Mac helper is Developer ID signed and notarized by Apple. It has no telemetry or cloud connection and does not receive your files.</p>
     </section>
   </>;
 }
