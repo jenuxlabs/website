@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: 'MindGallery beta',
   description: 'A private, local-first gallery with OCR search, people review and optional help from your own computers.',

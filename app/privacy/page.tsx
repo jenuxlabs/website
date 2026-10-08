@@ -1,3 +1,5 @@
+export const dynamic = 'force-static';
+
 export default function Privacy() {
   return <>
     <section className="page-hero"><p className="eyebrow">PRIVACY</p><h1>Clear, product-specific privacy.</h1><p className="lede">What stays local, what third-party services may process, and the choices available to you.</p></section>

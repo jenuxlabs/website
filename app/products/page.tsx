@@ -1,3 +1,5 @@
+export const dynamic = 'force-static';
+
 export default function Products() {
   return <>
     <section className="page-hero"><p className="eyebrow">JENUX LABS PRODUCTS</p><h1>Useful tools.<br />Built in the open.</h1><p className="lede">Working software, real beta builds and previews—with the stage made clear and the hype kept low.</p></section>

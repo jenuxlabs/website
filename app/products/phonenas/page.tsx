@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = { title: 'PhoneNAS 1.0.2 beta', description: 'Turn selected Android storage into practical SMB network shares.' };
 
 export default function PhoneNAS() {

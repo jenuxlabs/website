@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = { title: 'PhoneDrop', description: 'Fast, private local file transfer across Android, macOS and Windows.' };
 
 const downloads = [

@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: 'P-CAM preview',
   description: 'Turn nearby phones into a coordinated camera crew with local recording and a Director view.',

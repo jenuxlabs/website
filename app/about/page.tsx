@@ -1,1 +1,3 @@
+export const dynamic = 'force-static';
+
 export default function About(){return <><section className="page-hero"><p className="eyebrow">ABOUT THE LAB</p><h1>Useful software. Curious hardware.</h1></section><article className="content"><p className="large">Jenux Labs is an independent software and electronics development lab built on decades of hands-on engineering experience.</p><p>Our public products start with practical tools for phones and computers. In parallel, the lab explores embedded audio, physical interfaces, firmware and new hardware ideas—including work that is still taking shape.</p><p>We’ll share the useful parts as they become ready: what a project is for, what we learned building it and when it is ready for other people to try.</p></article></>}

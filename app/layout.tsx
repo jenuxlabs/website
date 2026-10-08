@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://jenuxlabs.com'),
   title: { default: 'Jenux Labs — Useful software for your devices', template: '%s — Jenux Labs' },

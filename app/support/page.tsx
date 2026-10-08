@@ -1,3 +1,5 @@
+export const dynamic = 'force-static';
+
 export default function Support() {
   return <>
     <section className="page-hero"><p className="eyebrow">SUPPORT</p><h1>How can we help?</h1><p className="lede">Product support, beta feedback and practical troubleshooting.</p></section>
