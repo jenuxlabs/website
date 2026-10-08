@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://jenuxlabs.com'),
@@ -9,17 +10,30 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return <html lang="en"><head><link rel="stylesheet" href="/site.css?v=20260910b" /></head><body>
+  return <html lang="en"><head><link rel="stylesheet" href="/site.css?v=20261009b" /></head><body>
     <header className="site-header">
-      <a className="brand" href="/" aria-label="Jenux Labs home"><img className="brand-logo" src="/jenux-mark.png" alt="" /><span><b>JENUX</b><small>LABS</small></span></a>
+      <Link className="brand" href="/" aria-label="Jenux Labs home"><img className="brand-logo" src="/jenux-mark.png" alt="" /><span><b>JENUX</b><small>LABS</small></span></Link>
       <nav aria-label="Main navigation">
-        <details className="products-menu"><summary>Apps <span aria-hidden="true">⌄</span></summary><div className="products-menu-panel">
+        <div className="desktop-nav-links">
+        <details className="products-menu"><summary>Products <span aria-hidden="true">⌄</span></summary><div className="products-menu-panel">
           <a href="/products/phonedrop/"><strong><img src="/phonedrop/logo.png" alt="" />PhoneDrop</strong><small>Local file transfer · available</small></a>
-          <a href="/products/phonenas/"><strong><img src="/phonenas/icon.png" alt="" />PhoneNAS</strong><small>Android NAS · closed testing</small></a>
-          <a href="/products/phonedesk/"><strong><span className="menu-monogram">PD</span>PhoneDesk</strong><small>Android desktop workspace · in development</small></a>
-          <a className="products-menu-all" href="/products/">See all apps →</a>
+          <a href="/products/phonenas/"><strong><img src="/phonenas/icon.png" alt="" />PhoneNAS</strong><small>Android NAS · 1.0.2 beta</small></a>
+          <a href="/products/mindgallery/"><strong><img src="/mindgallery/icon.png" alt="" />MindGallery</strong><small>Private photo intelligence · beta</small></a>
+          <a href="/products/pcam/"><strong><img src="/pcam/icon.png" alt="" />P-CAM</strong><small>Multi-camera system · preview</small></a>
+          <a className="products-menu-all" href="/products/">See all products →</a>
         </div></details>
         <a href="/downloads/">Downloads</a><a href="/support/">Support</a><a href="/privacy/">Privacy</a>
+        </div>
+        <details className="mobile-site-menu"><summary><span className="menu-glyph" aria-hidden="true">☰</span> Menu</summary><div className="mobile-site-menu-panel">
+          <a href="/products/">All products</a>
+          <a href="/products/phonedrop/">PhoneDrop</a>
+          <a href="/products/phonenas/">PhoneNAS</a>
+          <a href="/products/mindgallery/">MindGallery</a>
+          <a href="/products/pcam/">P-CAM</a>
+          <a href="/downloads/">Downloads</a>
+          <a href="/support/">Support</a>
+          <a href="/privacy/">Privacy</a>
+        </div></details>
       </nav>
     </header>
     <main>{children}</main>
