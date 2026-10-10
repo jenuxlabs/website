@@ -4,8 +4,8 @@ export default function Privacy() {
   return <>
     <section className="page-hero"><p className="eyebrow">PRIVACY</p><h1>Clear, product-specific privacy.</h1><p className="lede">What stays local, what third-party services may process, and the choices available to you.</p></section>
     <article className="content">
-      <p>Last updated: 9 October 2026</p>
-      <h2 id="phonedrop">PhoneDrop · Windows 1.0.8, macOS 1.0.4, Android 1.0.7 testing</h2>
+      <p>Last updated: 11 October 2026</p>
+      <h2 id="phonedrop">PhoneDrop · Windows 1.0.8, macOS 1.0.5, Android 1.0.9 testing</h2>
       <p>PhoneDrop transfers files directly between devices that can reach each other on the same local network. Jenux Labs does not operate a file-transfer relay and does not receive the contents of your transfers.</p>
       <ul>
         <li><strong>Files and file names:</strong> files you choose, their names, sizes and transfer instructions are sent to the destination device you select. They are not uploaded to Jenux Labs.</li>

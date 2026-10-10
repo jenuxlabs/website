@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 
 const phoneDrop = [
   ['⊞', 'Windows', 'PhoneDrop 1.0.8 installer', '/phonedrop/PhoneDrop-Setup-1.0.8.exe', 'Download for Windows'],
-  ['⌘', 'macOS', 'PhoneDrop 1.0.4 disk image', '/files/PhoneDrop-1.0.4.dmg', 'Download for macOS'],
-  ['◆', 'Android', 'PhoneDrop 1.0.7 · closed testing', 'https://play.google.com/apps/testing/labs.jenux.phonedrop', 'Open Google Play'],
+  ['⌘', 'macOS', 'PhoneDrop 1.0.5 · signed and notarized', '/files/PhoneDrop-1.0.5-macOS.dmg', 'Download for macOS'],
+  ['◆', 'Android', 'PhoneDrop 1.0.9 · closed testing', 'https://play.google.com/apps/testing/labs.jenux.phonedrop', 'Open Google Play'],
 ];
 
 const phoneNAS = [
@@ -36,12 +36,12 @@ export default function Downloads() {
         <article><span className="os-icon">◆</span><div><h3>Android preview</h3><p>P-CAM 0.6.10 APK · 9.8 MB · debug-signed · Android 8.0+</p></div><a className="button" href="/files/P-CAM-0.6.10-Android-preview.apk" download>Download Android preview <span>↓</span></a></article>
         <article><span className="os-icon">⌘</span><div><h3>Mac Director + Library</h3><p>P-CAM Desktop 0.2 · universal macOS preview</p></div><a className="button" href="/files/P-CAM-Desktop-0.2-macOS.dmg" download>Download Mac preview <span>↓</span></a></article>
       </div>
-      <p className="quiet">The Android package is debug-signed and may not install over another signing identity. The Mac package passed disk-image and app-signature checks. No public iOS package is available yet.</p>
+      <p className="quiet">The Android package is debug-signed and may not install over another signing identity. The Mac package passed disk-image and app-signature checks. No public iOS package is available yet. Screenshots are coming.</p>
     </section>
     <section className="section download-section">
       <header><p className="eyebrow">MINDGALLERY</p><h2>Private photo intelligence, in beta.</h2><p>The signed Android beta is distributed through Google Play. That keeps a large, frequently changing package out of the website download pile.</p></header>
       <div className="download-grid"><article><span className="os-icon">◆</span><div><h3>Android closed beta</h3><p>MindGallery 0.1.1 · arm64 · tester access may be required</p></div><a className="button" href="https://play.google.com/apps/testing/com.jenuxlabs.mindgallery">Open Google Play <span>↗</span></a></article></div>
-      <p className="quiet">No public iPhone or iPad package yet. <a href="/products/mindgallery/">See what MindGallery is becoming →</a></p>
+      <p className="quiet">A newer device-tested Android candidate exists, but the current Play beta remains the public route until that package is promoted. No public iPhone or iPad package yet. Screenshots are coming. <a href="/products/mindgallery/">See what MindGallery is becoming →</a></p>
     </section>
   </>;
 }

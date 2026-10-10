@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return <html lang="en"><head><link rel="stylesheet" href="/site.css?v=20261009b" /></head><body>
+  return <html lang="en"><head><link rel="stylesheet" href="/site.css?v=20261011a" /></head><body>
     <header className="site-header">
       <Link className="brand" href="/" aria-label="Jenux Labs home"><img className="brand-logo" src="/jenux-mark.png" alt="" /><span><b>JENUX</b><small>LABS</small></span></Link>
       <nav aria-label="Main navigation">
@@ -24,7 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <a href="/products/pcam/"><strong><img src="/pcam/icon.png" alt="" />P-CAM</strong><small>Multi-camera system · preview</small></a>
           <a className="products-menu-all" href="/products/">See all products →</a>
         </div></details>
-        <a href="/downloads/">Downloads</a><a href="/support/">Support</a><a href="/privacy/">Privacy</a>
+        <a href="/downloads/">Downloads</a><a href="/blog/">Blog</a><a href="/support/">Support</a><a href="/privacy/">Privacy</a>
         </div>
         <details className="mobile-site-menu"><summary><span className="menu-glyph" aria-hidden="true">☰</span> Menu</summary><div className="mobile-site-menu-panel">
           <a href="/products/">All products</a>
@@ -33,12 +33,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <a href="/products/mindgallery/">MindGallery</a>
           <a href="/products/pcam/">P-CAM</a>
           <a href="/downloads/">Downloads</a>
+          <a href="/blog/">Blog</a>
           <a href="/support/">Support</a>
           <a href="/privacy/">Privacy</a>
         </div></details>
       </nav>
     </header>
     <main>{children}</main>
-    <footer><div><strong>JENUX LABS</strong><p>Useful technology.</p></div><div className="footer-links"><a href="/products/">Products</a><a href="/about/">About</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="mailto:hello@jenuxlabs.com">Contact</a></div><p className="copyright">© 2026 Jenux Labs · Independent software and technology lab</p></footer>
+    <footer><div><strong>JENUX LABS</strong><p>Useful technology.</p></div><div className="footer-links"><a href="/products/">Products</a><a href="/blog/">Blog</a><a href="/about/">About</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="mailto:hello@jenuxlabs.com">Contact</a></div><p className="copyright">© 2026 Jenux Labs · Independent software and technology lab</p></footer>
   </body></html>;
 }
