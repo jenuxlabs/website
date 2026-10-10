@@ -14,7 +14,7 @@ const phoneDrop = [
 ];
 
 const phoneNAS = [
-  ['◆', 'Android', 'PhoneNAS 1.0.2 signed APK', '/files/PhoneNAS-1.0.2-Android.apk', 'Download Android beta'],
+  ['◆', 'Android', 'PhoneNAS 1.0.2 · Google Play closed testing', 'https://play.google.com/apps/testing/com.phonenas.app', 'Open Google Play'],
   ['⌘', 'macOS', 'PhoneNAS Helper 1.3 · signed and notarized', '/files/PhoneNAS-Helper-1.3-macOS.dmg', 'Download Mac helper'],
 ];
 
@@ -27,16 +27,16 @@ export default function Downloads() {
     </section>
     <section className="section download-section">
       <header><p className="eyebrow">PHONENAS</p><h2>Android server and optional Mac helper.</h2><p>Install PhoneNAS on Android. The helper discovers available servers, makes them visible in Finder and relays SMB locally; direct SMB remains available without it.</p></header>
-      <div className="download-grid">{phoneNAS.map(([icon, name, detail, href, label]) => <article key={name}><span className="os-icon">{icon}</span><div><h3>{name}</h3><p>{detail}</p></div><a className="button" href={href} download>{label} <span>↓</span></a></article>)}</div>
-      <p className="quiet">PhoneNAS 1.0.2 remains a beta. The Mac helper is optional, Apple-notarized, and contains no telemetry or cloud file service.</p>
+      <div className="download-grid">{phoneNAS.map(([icon, name, detail, href, label]) => <article key={name}><span className="os-icon">{icon}</span><div><h3>{name}</h3><p>{detail}</p></div><a className="button" href={href} download={href.startsWith('/') ? true : undefined}>{label} <span>{href.startsWith('/') ? '↓' : '↗'}</span></a></article>)}</div>
+      <p className="quiet">PhoneNAS 1.0.2 remains a beta and Google Play tester access may be required. The Mac helper is optional, Apple-notarized, and contains no telemetry or cloud file service.</p>
     </section>
     <section className="section download-section">
       <header><p className="eyebrow">P-CAM</p><h2>Multi-phone camera previews.</h2><p>Working Android and Mac packages for testing a small local camera crew.</p></header>
       <div className="download-grid">
-        <article><span className="os-icon">◆</span><div><h3>Android preview</h3><p>P-CAM 0.6.10 APK · 9.8 MB · debug-signed · Android 8.0+</p></div><a className="button" href="/files/P-CAM-0.6.10-Android-preview.apk" download>Download Android preview <span>↓</span></a></article>
+        <article><span className="os-icon">◆</span><div><h3>Android closed test</h3><p>P-CAM for Android · Google Play tester access required</p></div><a className="button" href="https://play.google.com/apps/testing/com.jenuxlabs.phonecam">Open Google Play <span>↗</span></a></article>
         <article><span className="os-icon">⌘</span><div><h3>Mac Director + Library</h3><p>P-CAM Desktop 0.2 · universal macOS preview</p></div><a className="button" href="/files/P-CAM-Desktop-0.2-macOS.dmg" download>Download Mac preview <span>↓</span></a></article>
       </div>
-      <p className="quiet">The Android package is debug-signed and may not install over another signing identity. The Mac package passed disk-image and app-signature checks. No public iOS package is available yet. Screenshots are coming.</p>
+      <p className="quiet">The Android build is available only through Google Play closed testing. The Mac package passed disk-image and app-signature checks. No public iOS package is available yet. Screenshots are coming.</p>
     </section>
     <section className="section download-section">
       <header><p className="eyebrow">MINDGALLERY</p><h2>Private photo intelligence, in beta.</h2><p>The signed Android beta is distributed through Google Play. That keeps a large, frequently changing package out of the website download pile.</p></header>

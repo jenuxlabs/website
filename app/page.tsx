@@ -2,7 +2,7 @@ const apps = [
   { name: 'PhoneDrop', status: 'Available', tone: 'drop', line: 'Move files directly between Android, macOS and Windows.', detail: 'Fast local transfers. No account, no cloud detour.', href: '/products/phonedrop/', icon: '/phonedrop/logo.png' },
   { name: 'PhoneNAS', status: '1.0.2 beta', tone: 'nas', line: 'Turn an Android phone into useful network storage.', detail: 'Folders, attached drives, users and permissions over familiar SMB.', href: '/products/phonenas/', icon: '/phonenas/icon.png' },
   { name: 'MindGallery', status: 'Android beta', tone: 'mind', line: 'A gallery that can actually help you find things.', detail: 'Local-first search, OCR and careful people review, built on Aves.', href: '/products/mindgallery/', icon: '/mindgallery/icon.png' },
-  { name: 'P-CAM', status: 'Android + Mac preview', tone: 'cam', line: 'A small camera crew made from the phones you already own.', detail: 'Record locally. Monitor and direct together over your own Wi-Fi.', href: '/products/pcam/', icon: '/pcam/icon.png' },
+  { name: 'P-CAM', status: 'Android test + Mac preview', tone: 'cam', line: 'A small camera crew made from the phones you already own.', detail: 'Record locally. Monitor and direct together over your own Wi-Fi.', href: '/products/pcam/', icon: '/pcam/icon.png' },
 ];
 
 export default function Home() {

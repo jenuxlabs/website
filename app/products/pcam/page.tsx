@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const downloads = [
-  { platform: 'Android · preview APK', title: 'P-CAM 0.6.10', detail: 'Installable preview · debug-signed · Android 8.0 or later', href: '/files/P-CAM-0.6.10-Android-preview.apk', label: 'Download Android preview' },
+  { platform: 'Android · closed testing', title: 'P-CAM for Android', detail: 'Google Play test · tester access required', href: 'https://play.google.com/apps/testing/com.jenuxlabs.phonecam', label: 'Open Google Play' },
   { platform: 'macOS · Director + Library', title: 'P-CAM Desktop 0.2', detail: 'Universal Mac preview · camera control and verified project collection', href: '/files/P-CAM-Desktop-0.2-macOS.dmg', label: 'Download Mac preview' },
 ];
 
@@ -16,7 +16,7 @@ export default function PCam() {
   return <>
     <section className="product-spotlight upcoming-spotlight cam-spotlight">
       <div>
-        <span className="status">Preview · Android 0.6.10 · Mac 0.2</span>
+        <span className="status">Preview · Android testing · Mac 0.2</span>
         <div className="product-lockup"><img src="/pcam/icon.png" alt="" /><span>P-CAM</span></div>
         <h1>A camera crew made from phones.</h1>
         <p className="lede">Put a few phones on the same Wi-Fi. Use them as cameras, a Director—or both. Watch the views together while every camera records full-quality footage locally.</p>
@@ -43,8 +43,8 @@ export default function PCam() {
 
     <section className="section release-section" id="downloads">
       <header><p className="eyebrow">PREVIEW BUILDS</p><h2>Real packages, clearly labelled.</h2><p>Use these on devices and networks you trust. They are previews, not finished store releases.</p></header>
-      <div className="release-downloads">{downloads.map((item) => <article className="release-download" key={item.platform}><span className="release-platform">{item.platform}</span><h3>{item.title}</h3><p>{item.detail}</p><a className="button" href={item.href} download>{item.label} <span>↓</span></a></article>)}</div>
-      <p className="quiet">The Android APK is debug-signed and may not install over a differently signed build. The Mac disk image passed integrity and app-signature checks. iPhone and iPad builds are in active development; no public iOS package is offered yet.</p>
+      <div className="release-downloads">{downloads.map((item) => <article className="release-download" key={item.platform}><span className="release-platform">{item.platform}</span><h3>{item.title}</h3><p>{item.detail}</p><a className="button" href={item.href} download={item.href.startsWith('/') ? true : undefined}>{item.label} <span>{item.href.startsWith('/') ? '↓' : '↗'}</span></a></article>)}</div>
+      <p className="quiet">The Android build is available only through Google Play closed testing. The Mac disk image passed integrity and app-signature checks. iPhone and iPad builds are in active development; no public iOS package is offered yet.</p>
     </section>
   </>;
 }
