@@ -23,7 +23,7 @@ export default function Downloads() {
     <section className="page-hero"><p className="eyebrow">DOWNLOADS</p><h1>Get the right tool.</h1><p className="lede">Published software and test builds, with the package type and maturity called out.</p><p className="download-safety-link">Want to know how the apps handle your data before downloading? <a href="/privacy/">Read privacy &amp; safety →</a></p></section>
     <section className="section download-section">
       <header><p className="eyebrow">PHONEDROP</p><h2>Direct local file transfer.</h2><p>Choose the version for the device you use.</p></header>
-      <div className="download-grid">{phoneDrop.map(([icon, name, detail, href, label]) => <article key={name}><span className="os-icon">{icon}</span><div><h3>{name}</h3><p>{detail}</p></div><a className="button" href={href}>{label} <span>↓</span></a></article>)}</div>
+      <div className="download-grid">{phoneDrop.map(([icon, name, detail, href, label]) => <article key={name}><span className="os-icon">{icon}</span><div><h3>{name}</h3><p>{detail}</p></div><a className="button" href={href} download={href.startsWith('/') ? true : undefined}>{label} <span>{href.startsWith('/') ? '↓' : '↗'}</span></a></article>)}</div>
     </section>
     <section className="section download-section">
       <header><p className="eyebrow">PHONENAS</p><h2>Android server and optional Mac helper.</h2><p>Install PhoneNAS on Android. The helper discovers available servers, makes them visible in Finder and relays SMB locally; direct SMB remains available without it.</p></header>
