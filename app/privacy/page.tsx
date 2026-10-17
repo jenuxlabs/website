@@ -4,8 +4,8 @@ export default function Privacy() {
   return <>
     <section className="page-hero"><p className="eyebrow">PRIVACY</p><h1>Clear, product-specific privacy.</h1><p className="lede">What stays local, what third-party services may process, and the choices available to you.</p></section>
     <article className="content">
-      <p>Last updated: 11 October 2026</p>
-      <h2 id="phonedrop">PhoneDrop · Windows 1.0.8, macOS 1.0.5, Android 1.0.9 testing</h2>
+      <p>Last updated: 17 October 2026. Platform features and test configurations can differ.</p>
+      <h2 id="phonedrop">PhoneDrop</h2>
       <p>PhoneDrop transfers files directly between devices that can reach each other on the same local network. Jenux Labs does not operate a file-transfer relay and does not receive the contents of your transfers.</p>
       <ul>
         <li><strong>Files and file names:</strong> files you choose, their names, sizes and transfer instructions are sent to the destination device you select. They are not uploaded to Jenux Labs.</li>
@@ -22,7 +22,7 @@ export default function Privacy() {
       <p>The Windows and macOS versions do not display advertising. They use local-network discovery, pairing and direct transfer features and keep their PhoneDrop preferences and trust records on the device.</p>
       <h2>Website</h2>
       <p>This website does not provide user accounts or upload forms and does not display advertising. Normal hosting and security infrastructure may process technical request data such as IP address, browser information, requested pages and timestamps to deliver and protect the site and its downloads.</p>
-      <h2 id="phonenas">PhoneNAS 1.0.2</h2>
+      <h2 id="phonenas">PhoneNAS and the Mac helper</h2>
       <p>PhoneNAS operates an SMB file server on your local network. It accesses only folders and attached storage that you explicitly select through Android’s system storage picker. File contents and SMB traffic travel directly between your devices; Jenux Labs does not operate a relay and does not receive your files.</p>
       <ul>
         <li><strong>Shares and users:</strong> share definitions, SMB usernames, password verifiers, permissions, home-folder settings and local management settings are stored on the Android device.</li>
@@ -33,7 +33,11 @@ export default function Privacy() {
       </ul>
       <p>The Android release uses Google Mobile Ads and Google Play Billing for the optional ad-free Pro upgrade. The advertising, consent and purchase information described above also applies to PhoneNAS. The optional Mac helper contains no advertising and relays SMB traffic locally while it is running.</p>
       <h2 id="mindgallery">MindGallery · Android closed testing</h2>
-      <p>MindGallery is an Aves-based photo and video gallery in closed testing. The current Libre test build does not include advertising, in-app billing or Crashlytics reporting. Some optional map and worker features can still communicate with services or devices you choose, as described below.</p>
+      <p>MindGallery is an Aves-based photo and video gallery under active testing. The detailed disclosures below describe Android. The current closed-test configuration does not serve ads; newer development builds include optional Google Play purchase and advertising code that is gated off until distribution and consent setup are complete. Some map and worker features can communicate with services or devices you choose.</p>
+      <h3>Advertising and purchases in future Play builds</h3>
+      <p>When enabled in a Play build, the free version may display a Google Mobile Ads banner. Google and its advertising partners may process advertising identifiers, device and network information, ad interactions and diagnostics according to the privacy policies and consent choices described above. Google’s consent tools are used before eligible ad requests. An optional MindGallery Pro purchase is planned to remove ads; it is not currently offered for sale. Google Play handles payment details and provides purchase status used to activate or restore Pro. No scan-limit removal is promised.</p>
+      <h3>Apple test builds</h3>
+      <p>Mac and iOS are separate test builds with different feature availability and system permissions. The current Mac test build has Faces disabled. Do not assume every Android feature described below is enabled on an Apple device.</p>
       <h3>Media and information stored on your devices</h3>
       <p>When you grant media or selected-folder access, MindGallery reads photos and videos and their available names, paths and metadata, which may include EXIF location coordinates. It builds a searchable library on the phone. Depending on features you use, app data can include OCR text, image descriptions and tags, face crops and numeric face embeddings, people names, confirmed assignments and unconfirmed suggestions, search/index records and scan checkpoints. Originals stay in your media library; indexing does not require uploading them to Jenux Labs.</p>
       <h3>Google ML Kit diagnostics and usage metrics</h3>
@@ -50,8 +54,9 @@ export default function Privacy() {
       <h3>Clearing MindGallery data</h3>
       <p>Android’s Clear storage or uninstall controls remove the app’s on-device private data, but do not necessarily clear <code>.JENUXAI</code> records in selected folders, original photos and videos, worker-side files or backups already made by Android. For a more complete cleanup, remove the app data and separately review selected folders, the configured Mac worker and your device-backup settings.</p>
       <p>For MindGallery privacy questions or deletion help, contact <a href="mailto:privacy@jenuxlabs.com">privacy@jenuxlabs.com</a>.</p>
-      <h2 id="pcam">P-CAM · preview builds</h2>
-      <p>P-CAM discovers participating cameras and Directors on your local network. Camera previews, control messages and project-transfer data travel between devices you choose. Full-quality recordings are stored on the camera device until you copy or remove them.</p>
+      <h2 id="pcam">PhoneMulticam · formerly P-CAM</h2>
+      <p>PhoneMulticam discovers participating cameras and Directors on your local network. Camera previews, control messages and supported project transfers travel between devices you choose. Full-quality recordings are stored on the camera device until you copy or remove them. Compatibility varies by preview build.</p>
+      <p>The Mac app requests Local Network permission for discovery and connections. Its Wi-Fi QR onboarding can request Location permission because macOS protects Wi-Fi scanning with that permission; the app does not use it to record your location.</p>
       <p>The current Android preview includes Google Mobile Ads and Google’s consent tools. Google and its partners may process advertising identifiers, device information, approximate location inferred from network information, ad interactions and diagnostics according to your region and choices. The Mac preview does not display advertising.</p>
       <h2>Retention and your choices</h2>
       <p>PhoneDrop’s app-owned settings and records remain on your device until you remove pairings, reset the app, clear its storage or uninstall it. Received files remain in the PhoneDrop folder until you delete them. Third-party retention is governed by the applicable provider’s policies and your consent choices.</p>

@@ -1,0 +1,50 @@
+{
+  "checkedAt": "2026-10-17",
+  "macMinimum": "13.0",
+  "verification": [
+    "disk image integrity",
+    "strict app signature",
+    "Developer ID",
+    "Apple notarization accepted",
+    "stapled ticket",
+    "Gatekeeper app and DMG assessment",
+    "Intel and Apple silicon architectures"
+  ],
+  "physicalSecondMacInstall": "Not performed in this website update",
+  "apps": [
+    {
+      "name": "PhoneDrop",
+      "version": "1.0.5",
+      "build": "2756",
+      "status": "Current distributed build",
+      "file": "/files/PhoneDrop-1.0.5-macOS.dmg",
+      "sha256": "d84dbd20e903b3def6c653d1f31a5d850fa39c306390b9de0462b7bc0d30a2ea"
+    },
+    {
+      "name": "PhoneNAS Helper",
+      "version": "1.3",
+      "build": "9",
+      "status": "Available",
+      "file": "/files/PhoneNAS-Helper-1.3-build9-macOS.dmg",
+      "sha256": "df306863a02676ebb2b6a85bad58d0adc77241e77572b2b75008fe95235a538e"
+    },
+    {
+      "name": "PhoneMulticam",
+      "version": "0.5.1",
+      "build": "12",
+      "status": "Early preview; Wi-Fi and Android collection limitations",
+      "file": "/files/PhoneMulticam-0.5.1-build12-macOS.dmg",
+      "sha256": "4548c23ffd8ae2e06997f12a18ed6e96a4875970e54e7a346ef09fb67ccee0ee",
+      "notarization": "ea3e2709-ccb3-40d3-83cd-bf7ff240d657"
+    },
+    {
+      "name": "MindGallery",
+      "version": "1.15.25",
+      "build": "340",
+      "status": "Beta; Faces disabled; expires 2026-12-31",
+      "file": "https://github.com/jenuxlabs/website/releases/download/mac-apps-2026-10-17/MindGallery-1.15.25-build340-macOS.dmg",
+      "sha256": "a0ebf4433f6a9711462e81e365ed08a9bedbfba80faaf250904dc7afff478162",
+      "notarization": "0f4bc00f-454f-4232-bd97-968fea706cd6"
+    }
+  ]
+}

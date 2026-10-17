@@ -1,47 +1,9 @@
 import type { Metadata } from 'next';
-
-export const dynamic = 'force-static';
-
-export const metadata: Metadata = {
-  title: 'Downloads',
-  description: 'Jenux Labs product downloads, including clearly labelled preview builds.',
-};
-
-const phoneDrop = [
-  ['⊞', 'Windows', 'PhoneDrop 1.0.8 installer', '/phonedrop/PhoneDrop-Setup-1.0.8.exe', 'Download for Windows'],
-  ['⌘', 'macOS', 'PhoneDrop 1.0.5 · signed and notarized', '/files/PhoneDrop-1.0.5-macOS.dmg', 'Download for macOS'],
-  ['◆', 'Android', 'PhoneDrop 1.0.9 · closed testing', 'https://play.google.com/apps/testing/labs.jenux.phonedrop', 'Open Google Play'],
-];
-
-const phoneNAS = [
-  ['◆', 'Android', 'PhoneNAS 1.0.2 · Google Play closed testing', 'https://play.google.com/apps/testing/com.phonenas.app', 'Open Google Play'],
-  ['⌘', 'macOS', 'PhoneNAS Helper 1.3 · signed and notarized', '/files/PhoneNAS-Helper-1.3-macOS.dmg', 'Download Mac helper'],
-];
-
-export default function Downloads() {
-  return <>
-    <section className="page-hero"><p className="eyebrow">DOWNLOADS</p><h1>Get the right tool.</h1><p className="lede">Published software and test builds, with the package type and maturity called out.</p><p className="download-safety-link">Want to know how the apps handle your data before downloading? <a href="/privacy/">Read privacy &amp; safety →</a></p></section>
-    <section className="section download-section">
-      <header><p className="eyebrow">PHONEDROP</p><h2>Direct local file transfer.</h2><p>Choose the version for the device you use.</p></header>
-      <div className="download-grid">{phoneDrop.map(([icon, name, detail, href, label]) => <article key={name}><span className="os-icon">{icon}</span><div><h3>{name}</h3><p>{detail}</p></div><a className="button" href={href} download={href.startsWith('/') ? true : undefined}>{label} <span>{href.startsWith('/') ? '↓' : '↗'}</span></a></article>)}</div>
-    </section>
-    <section className="section download-section">
-      <header><p className="eyebrow">PHONENAS</p><h2>Android server and optional Mac helper.</h2><p>Install PhoneNAS on Android. The helper discovers available servers, makes them visible in Finder and relays SMB locally; direct SMB remains available without it.</p></header>
-      <div className="download-grid">{phoneNAS.map(([icon, name, detail, href, label]) => <article key={name}><span className="os-icon">{icon}</span><div><h3>{name}</h3><p>{detail}</p></div><a className="button" href={href} download={href.startsWith('/') ? true : undefined}>{label} <span>{href.startsWith('/') ? '↓' : '↗'}</span></a></article>)}</div>
-      <p className="quiet">PhoneNAS 1.0.2 remains a beta and Google Play tester access may be required. The Mac helper is optional, Apple-notarized, and contains no telemetry or cloud file service.</p>
-    </section>
-    <section className="section download-section">
-      <header><p className="eyebrow">P-CAM</p><h2>Multi-phone camera previews.</h2><p>Working Android and Mac packages for testing a small local camera crew.</p></header>
-      <div className="download-grid">
-        <article><span className="os-icon">◆</span><div><h3>Android closed test</h3><p>P-CAM for Android · Google Play tester access required</p></div><a className="button" href="https://play.google.com/apps/testing/com.jenuxlabs.phonecam">Open Google Play <span>↗</span></a></article>
-        <article><span className="os-icon">⌘</span><div><h3>Mac Director + Library</h3><p>P-CAM Desktop 0.2 · universal macOS preview</p></div><a className="button" href="/files/P-CAM-Desktop-0.2-macOS.dmg" download>Download Mac preview <span>↓</span></a></article>
-      </div>
-      <p className="quiet">The Android build is available only through Google Play closed testing. The Mac package passed disk-image and app-signature checks. No public iOS package is available yet. Screenshots are coming.</p>
-    </section>
-    <section className="section download-section">
-      <header><p className="eyebrow">MINDGALLERY</p><h2>Private photo intelligence, in beta.</h2><p>The signed Android beta is distributed through Google Play. That keeps a large, frequently changing package out of the website download pile.</p></header>
-      <div className="download-grid"><article><span className="os-icon">◆</span><div><h3>Android closed beta</h3><p>MindGallery 0.1.1 · arm64 · tester access may be required</p></div><a className="button" href="https://play.google.com/apps/testing/com.jenuxlabs.mindgallery">Open Google Play <span>↗</span></a></article></div>
-      <p className="quiet">A newer device-tested Android candidate exists, but the current Play beta remains the public route until that package is promoted. No public iPhone or iPad package yet. Screenshots are coming. <a href="/products/mindgallery/">See what MindGallery is becoming →</a></p>
-    </section>
-  </>;
-}
+import { DownloadRows } from '../../components/Products';
+import { products } from '../../lib/products';
+export const metadata: Metadata = { title: 'Downloads & testing', description: 'Official Jenux Labs downloads, signed Mac packages and Google Play test access.', alternates: { canonical: '/downloads' } };
+export default function Downloads() { return <>
+  <section className="page-hero"><p className="eyebrow">DOWNLOADS &amp; TESTING</p><h1>Pick your app. Find your build.</h1><p className="lede">Direct Mac downloads are Developer ID signed and Apple-notarized. Android installs go through Google Play testing.</p><nav className="jump-links" aria-label="Download sections">{products.map(p => <a href={'#' + p.id} key={p.id}>{p.name} ↓</a>)}</nav></section>
+  <div className="download-catalogue">{products.map(p => <section className="download-group" id={p.id} key={p.id}><header className="section-heading"><div className="download-title"><img src={p.icon} width="40" height="40" alt="" /><div><h2>{p.name}</h2><p>{p.status}</p></div></div><a className="small-link" href={'/products/' + p.id}>About the app ↗</a></header><DownloadRows item={p} /><p className="release-note">{p.note}</p></section>)}</div>
+  <aside className="download-help"><h2>A couple of things before you install.</h2><div><p><strong>Mac:</strong> open the disk image and drag the app to Applications. Notarization checks distribution safety; it does not make a preview feature-complete.</p><p><strong>Android:</strong> sign in with your approved tester account. A closed-test link does not grant access automatically. <a href="/support">Need access or help?</a></p><p><strong>Keep your originals.</strong> Check transferred files and test recordings before deleting the source. <a href="/privacy">Privacy details</a> · <a href="/download-checksums.txt">Package checksums</a></p></div></aside>
+</>; }

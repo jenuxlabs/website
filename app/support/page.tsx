@@ -1,19 +1,10 @@
-export const dynamic = 'force-static';
-
-export default function Support() {
-  return <>
-    <section className="page-hero"><p className="eyebrow">SUPPORT</p><h1>How can we help?</h1><p className="lede">Product support, beta feedback and practical troubleshooting.</p></section>
-    <article className="content">
-      <h2>PhoneDrop support</h2>
-      <p>Include PhoneDrop version, device model, operating system and a short description of what happened. If discovery is the problem, tell us whether both devices share the same Wi‑Fi, LAN or phone hotspot.</p>
-      <p className="note">Never email private files, passwords, pairing secrets or information you do not want included in a support message.</p>
-      <p><a className="button" href="mailto:support@jenuxlabs.com?subject=PhoneDrop%20support">Email PhoneDrop support</a></p>
-      <h2>Feature ideas</h2>
-      <p>Tell us what would make PhoneDrop better. The app’s Feedback button opens your own email app so you can review everything before sending.</p>
-      <h2>PhoneNAS support</h2>
-      <p>For beta feedback, include the product version, device model, operating-system version and the exact step that did not work. MindGallery and P-CAM reports are welcome; please remember that both are still test-stage products.</p>
-      <h2>General enquiries</h2>
-      <p><a href="mailto:hello@jenuxlabs.com">hello@jenuxlabs.com</a></p>
-    </article>
-  </>;
-}
+import type { Metadata } from 'next';
+export const metadata: Metadata = { title: 'Support', description: 'Help with Jenux Labs apps, downloads and test access.' };
+export default function Support() { return <><section className="page-hero"><p className="eyebrow">SUPPORT</p><h1>Let’s get it working.</h1><p className="lede">A quick question, a bug report or testing access—send a note.</p><div className="actions"><a className="button" href="mailto:support@jenuxlabs.com">Email support ↗</a><a href="mailto:hello@jenuxlabs.com">General enquiries</a></div></section>
+  <section className="support-content"><div><h2>Help us reproduce it.</h2><p>Include the app and version, your device and operating system, what you tried, and what happened instead. For connection problems, mention Wi-Fi, Ethernet, hotspot or USB.</p><p className="note">Please don’t send passwords, pairing secrets, private photos or unedited logs containing personal information.</p></div><div className="faq">
+    <details><summary>Google Play says I’m not a tester.</summary><p>Closed tests need an approved Google account. Sign in with the account used for the test invitation. If you don’t have one, email us with the app you’d like to try; access depends on the current test.</p></details>
+    <details><summary>Which Mac download should I choose?</summary><p>The downloadable Mac apps support both Intel and Apple silicon. PhoneMulticam requires macOS 13 or later. Open the DMG and drag the app to Applications. If macOS reports a security problem, stop and contact support—don’t disable its protections.</p></details>
+    <details><summary>My devices can’t see each other.</summary><p>Check that they share a reachable local network, that Local Network permission is allowed, and that the network doesn’t isolate clients. A VPN or guest Wi-Fi can interfere. PhoneMulticam still has known connection issues in its early preview.</p></details>
+    <details><summary>What works in the camera preview?</summary><p>PhoneMulticam is for experimentation. Mixed-device recording needs more testing, Wi-Fi issues are being investigated, and Android-to-Mac project collection is not yet compatible. Test a short take and check the saved files before relying on a setup.</p></details>
+    <details><summary>Where are the MindGallery beta links?</summary><p>The signed and notarized Mac beta is on the Downloads page. It needs macOS 13+, has Faces disabled, and expires on 31 December 2026. iOS testing still requires an invitation; there is no public invite link yet. The next Android Play release is not live yet.</p></details>
+  </div></section></>; }
