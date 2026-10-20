@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-17",
+  "checkedAt": "2026-10-20",
   "macMinimum": "13.0",
   "verification": [
     "disk image integrity",
@@ -45,6 +45,16 @@
       "file": "https://github.com/jenuxlabs/website/releases/download/mac-apps-2026-10-17/MindGallery-1.15.25-build340-macOS.dmg",
       "sha256": "a0ebf4433f6a9711462e81e365ed08a9bedbfba80faaf250904dc7afff478162",
       "notarization": "0f4bc00f-454f-4232-bd97-968fea706cd6"
+    },
+    {
+      "name": "Mind Worker",
+      "version": "1.0.10",
+      "build": "graphical-apple-silicon",
+      "status": "Graphical installer; private runtime and models download after user confirmation",
+      "file": "/files/Mind-Worker-1.0.10-Graphical-Apple-Silicon.dmg",
+      "sha256": "fb6209736445c9b0ccbf709c7e1b23f6fbf4ffd634b61c312415a601ed3de47a",
+      "notarization": "c08c3759-277c-4761-9d24-461789a99741",
+      "compatibility": "Apple silicon; macOS 14+; first installation requires internet and 16 GiB free space"
     }
   ]
 }

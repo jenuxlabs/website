@@ -46,9 +46,10 @@ export const products: Product[] = [
     downloads: [
       { platform: 'Android', version: 'Closed testing · access pending', detail: 'The next Play release is not live yet · testing availability is limited', href: 'https://play.google.com/apps/testing/com.jenuxlabs.mindgallery', label: 'Check Google Play' },
       { platform: 'macOS', version: '1.15.25 · build 340 beta', detail: 'macOS 13+ · Intel + Apple silicon · signed & notarized · 40.5 MB via GitHub', href: 'https://github.com/jenuxlabs/website/releases/download/mac-apps-2026-10-17/MindGallery-1.15.25-build340-macOS.dmg', label: 'Download Mac beta' },
+      { platform: 'Mind Worker · macOS', version: '1.0.10 · graphical installer', detail: 'Apple silicon · macOS 14+ · signed & notarized · 16 GiB free and internet required for first install', href: '/files/Mind-Worker-1.0.10-Graphical-Apple-Silicon.dmg', label: 'Download Mind Worker' },
       { platform: 'iPhone + iPad', version: '1.15.21 · build 33508', detail: 'Uploaded to TestFlight · invitation required; no public invite link yet' }
     ],
-    note: 'The Mac download is a beta, not an App Store release. Faces are currently disabled and the build expires on 31 December 2026. Keep backups of your library. iOS remains invitation-only; the next Android Play release is not live yet. Features and helper support vary by platform.'
+    note: 'The Mac gallery is a beta, not an App Store release. Faces are currently disabled and the build expires on 31 December 2026. Mind Worker is a separate graphical installer: it downloads its private runtime and models only after you choose Install on your Mac; no model files are bundled. Face identity remains on your phone. Keep backups of your library. iOS remains invitation-only; the next Android Play release is not live yet. Features and helper support vary by platform.'
   },
   { id: 'pcam', name: 'PhoneMulticam', icon: '/pcam/icon.png', verb: 'Record', status: 'Early preview · formerly P-CAM',
     summary: 'Put your phones behind the camera. A local multi-camera setup with a Mac Director and project library.',
