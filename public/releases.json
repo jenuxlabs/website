@@ -2,12 +2,12 @@
   "checkedAt": "2026-10-20",
   "macMinimum": "13.0",
   "verification": [
-    "disk image integrity",
+    "download archive integrity",
     "strict app signature",
     "Developer ID",
     "Apple notarization accepted",
     "stapled ticket",
-    "Gatekeeper app and DMG assessment",
+    "Gatekeeper app assessment",
     "Intel and Apple silicon architectures"
   ],
   "physicalSecondMacInstall": "Not performed in this website update",
@@ -30,12 +30,14 @@
     },
     {
       "name": "PhoneMulticam",
-      "version": "0.5.1",
-      "build": "12",
-      "status": "Early preview; Wi-Fi and Android collection limitations",
-      "file": "/files/PhoneMulticam-0.5.1-build12-macOS.dmg",
-      "sha256": "4548c23ffd8ae2e06997f12a18ed6e96a4875970e54e7a346ef09fb67ccee0ee",
-      "notarization": "ea3e2709-ccb3-40d3-83cd-bf7ff240d657"
+      "version": "0.5.3",
+      "build": "15",
+      "status": "Early preview; fixed four-source ceiling; Wi-Fi and Android collection limitations",
+      "file": "/files/PhoneMulticam-0.5.3-build15-macOS.zip",
+      "sha256": "81bc4e0f642949dd96481d15416ddab699702d687d9d8ea0a6e6c927754896f1",
+      "notarization": "bff9e745-ffbf-4d3e-a733-705d36ef98a4",
+      "package": "Notarized signed-app ZIP",
+      "verifiedAt": "2026-10-26"
     },
     {
       "name": "MindGallery",

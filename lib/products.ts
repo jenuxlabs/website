@@ -57,15 +57,15 @@ export const products: Product[] = [
     intro: 'Use phones as cameras and a Mac as your Director. Monitor views, prepare takes, and keep original recordings on the camera devices.',
     features: [
       ['Camera', 'Record locally on the phone. Camera formats and resolution depend on the device and build.'],
-      ['Director', 'Bring camera views together and coordinate recording. The Mac preview includes updated iOS preparation checks.'],
+      ['Director', 'Bring camera views together and coordinate recording in a fixed 2×2 wall for up to four camera sources. The Mac preview includes updated iOS preparation checks.'],
       ['Library', 'Collect supported projects on the Mac with transfer verification. Android-to-Mac collection is not yet compatible with this preview.']
     ],
     downloads: [
-      { platform: 'macOS', version: '0.5.1 · build 12 preview', detail: 'macOS 13+ · Intel + Apple silicon · Developer ID signed & Apple-notarized', href: '/files/PhoneMulticam-0.5.1-build12-macOS.dmg', label: 'Download early preview' },
+      { platform: 'macOS', version: '0.5.3 · build 15 preview', detail: 'macOS 13+ · Intel + Apple silicon · Developer ID signed & Apple-notarized · ZIP', href: '/files/PhoneMulticam-0.5.3-build15-macOS.zip', label: 'Download early preview (ZIP)' },
       { platform: 'Android', version: 'Closed testing', detail: 'Tester access required · the store may still use the P-CAM name', href: 'https://play.google.com/apps/testing/com.jenuxlabs.phonecam', label: 'Google Play test' },
       { platform: 'iPhone + iPad', version: 'Device testing', detail: 'iOS interoperability work is underway; no public install link yet' }
     ],
-    note: 'Early testing only, not for an irreplaceable shoot. Wi-Fi discovery and connection issues remain under investigation. Mixed-device recording and saving still need physical acceptance tests. Android collection and Live Production are not available in this Mac preview.'
+    note: 'Early testing only, not for an irreplaceable shoot. This build enforces one four-camera ceiling across the Director and Collect. Wi-Fi discovery and connection issues remain under investigation. Mixed-device recording and saving still need physical acceptance tests. Android collection and Live Production are not available in this Mac preview.'
   }
 ];
 export function product(id: string): Product {
