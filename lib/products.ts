@@ -61,11 +61,11 @@ export const products: Product[] = [
       ['Library', 'Collect supported projects on the Mac with transfer verification. Android-to-Mac collection is not yet compatible with this preview.']
     ],
     downloads: [
-      { platform: 'macOS', version: '0.5.3 · build 15 preview', detail: 'macOS 13+ · Intel + Apple silicon · Developer ID signed & Apple-notarized · ZIP', href: '/files/PhoneMulticam-0.5.3-build15-macOS.zip', label: 'Download early preview (ZIP)' },
+      { platform: 'macOS', version: '0.5.4 · build 16 preview', detail: 'macOS 13+ · Intel + Apple silicon · Developer ID signed & Apple-notarized · ZIP', href: '/files/PhoneMulticam-0.5.4-build16-macOS.zip', label: 'Download early preview (ZIP)' },
       { platform: 'Android', version: 'Closed testing', detail: 'Tester access required · the store may still use the P-CAM name', href: 'https://play.google.com/apps/testing/com.jenuxlabs.phonecam', label: 'Google Play test' },
       { platform: 'iPhone + iPad', version: 'Device testing', detail: 'iOS interoperability work is underway; no public install link yet' }
     ],
-    note: 'Early testing only, not for an irreplaceable shoot. This build enforces one four-camera ceiling across the Director and Collect. Wi-Fi discovery and connection issues remain under investigation. Mixed-device recording and saving still need physical acceptance tests. Android collection and Live Production are not available in this Mac preview.'
+    note: 'Early testing only, not for an irreplaceable shoot. Build 16 improves preview orientation and reconnection, secure collection, Wi-Fi safeguards during recording, and reference-camera safety for Resolve export. The Director and Collect support up to four camera sources. Mixed-device recording and saving still need physical acceptance tests. Android collection and Live Production remain unavailable; fade decisions are logged, and the Director edit log is temporary.'
   }
 ];
 export function product(id: string): Product {
